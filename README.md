@@ -1,4 +1,4 @@
-# https://t.me/roboshvili_bot бот для напоминалок :)
+# https://t.me/roboshvili_bot - бот для напоминалок :)
 
 Доступные команды:
 ```bash
