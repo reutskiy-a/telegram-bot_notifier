@@ -33,7 +33,15 @@ class AddNoticeCommand extends Command
 
         $user = TgUser::updateOrCreate(
             ['id' => $message->from->id],
-            $message->from->toArray()
+            [
+                'id' => $message->from->id,
+                'first_name' => $message->from->first_name ?? '',
+                'last_name' => $message->from->last_name ?? '',
+                'username' => $message->from->username ?? '',
+                'language_code' => $message->from->language_code ?? '',
+                'is_bot' => $message->from->is_bot ?? '',
+                'role' => $message->from->role ?? '',
+            ]
         );
 
         $response = $this->telegram->sendMessage([

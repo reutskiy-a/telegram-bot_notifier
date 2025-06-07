@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('tg_users', function (Blueprint $table) {
             $table->bigInteger('id')->primary()->nullable(false)->unsigned();
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
             $table->string('username');
             $table->string('language_code');
             $table->boolean('is_bot');
